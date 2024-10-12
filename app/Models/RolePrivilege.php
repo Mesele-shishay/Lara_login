@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class RolePrivilege extends Model
 {
     use HasFactory;
+
+    protected $filable = [
+        'role_id',
+        'privilege_id',
+    ];
 }

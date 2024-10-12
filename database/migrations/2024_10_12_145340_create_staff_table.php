@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');    // user associated with the enrolement
             $table->foreignId('office_id')->nullable()->constrained()->onDelete('cascade');     // offfice he is enrolled in
             $table->foreignId('role_id')->constrained()->onDelete('restrict');      // what specific role he has
-            $table->unsignedBigInteger('shift_id');
+            $table->unsignedBigInteger('shift_id')->nullable();
             // $table->foreignId('shift_id')->nullable()->onDelete('restrict');     // work shifts
             $table->timestamps();
         });
